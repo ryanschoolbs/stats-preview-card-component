@@ -11,14 +11,48 @@
          sizes="32x32"
          href="./images/favicon-32x32.png"
       />
+      <link rel="stylesheet" href="style.css" />
+      <!-- <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+         integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+         crossorigin="anonymous"
+      /> -->
 
       <title>Frontend Mentor | Stats preview card component</title>
    </head>
    <body>
-      Get insights that help your business grow. Discover the benefits of data
-      analytics and make better decisions regarding revenue, customer
-      experience, and overall efficiency. 10k+ companies 314 templates 12m+
-      queries
+      <div class="card-container">
+         <div class="text-content">
+            <!-- <div class="text"> -->
+            <h1>
+               Get <span class="highlight">insights</span> that help your
+               business grow.
+            </h1>
+            <p>
+               Discover the benefits of data analytics and make better decisions
+               regarding revenue, customer experience, and overall efficiency.
+            </p>
+            <!-- </div> -->
+            <!-- <div class="stats"> -->
+            <ul class="nums-wrap">
+               <li>
+                  <p class="stats">10k+</p>
+                  <span>companies</span>
+               </li>
+               <li>
+                  <p class="stats">314</p>
+                  <span>templates</span>
+               </li>
+               <li>
+                  <p class="stats">12m+</p>
+                  <span>queries</span>
+               </li>
+            </ul>
+            <!-- </div> -->
+         </div>
+         <div class="image"></div>
+      </div>
 
       <!-- <div class="attribution">
          Challenge by
