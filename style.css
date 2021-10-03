@@ -20,6 +20,12 @@
 
 html {
    font-size: 15px;
+   /* font-size: 0.9375rem;
+   font-size: clamp(
+      0.9375rem,
+      0.558252427184466rem + 1.6181229773462782vw,
+      2.5rem
+   ); */
 }
 
 body {
@@ -37,6 +43,7 @@ body {
 .card-container {
    background-color: var(--main-card-blue);
    display: flex;
+
    column-gap: 2rem;
    max-width: 80vw;
    overflow: hidden;
@@ -46,6 +53,7 @@ body {
 .text-content {
    padding: 4rem;
    max-width: 50%;
+   flex-shrink: 1;
 }
 
 .text-content h1 {
@@ -63,7 +71,7 @@ body {
 }
 
 .highlight {
-   color: hsl(277, 64%, 61%);
+   color: var(--main-purple);
 }
 
 .nums-wrap {
@@ -92,7 +100,7 @@ body {
 }
 
 .image {
-   width: 48%;
+   flex-grow: 1;
    background-image: url("/images/image-header-desktop.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -110,4 +118,60 @@ body {
    height: 100%;
    z-index: 2;
    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+   .card-container {
+      flex-direction: column;
+      min-height: 80vh;
+   }
+
+   .image {
+      min-width: 100%;
+   }
+
+   .text-content {
+      order: 2;
+      flex-shrink: 1;
+      text-align: center;
+      max-width: 100%;
+   }
+
+   .text-content p {
+      max-width: 100%;
+   }
+
+   .nums-wrap {
+      margin: 0 auto;
+      max-width: 80%;
+   }
+}
+
+@media (max-width: 425px) {
+   .card-container {
+      min-height: 100vh;
+   }
+
+   .text-content {
+      flex-grow: 0.2;
+      padding: 2rem;
+      padding-bottom: 0;
+   }
+
+   .text-content h1 {
+      font-size: 1.8rem;
+   }
+
+   .nums-wrap {
+      flex-direction: column;
+      row-gap: 2rem;
+   }
+
+   .nums-wrap .stats {
+      font-size: 1.2rem;
+   }
+
+   .nums-wrap span {
+      font-size: 0.4rem;
+   }
 }
