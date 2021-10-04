@@ -101,7 +101,7 @@ body {
 
 .image {
    flex-grow: 1;
-   background-image: url("/images/image-header-desktop.jpg");
+   background-image: url("images/image-header-desktop.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    position: relative;
